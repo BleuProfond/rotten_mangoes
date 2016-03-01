@@ -1381,3 +1381,186 @@ Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2016-03-01 18:04:42 +0000
 
 
 Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2016-03-01 18:04:42 +0000
+
+
+Started GET "/movies/new" for 10.0.2.2 at 2016-03-01 18:19:05 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (3.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#new as HTML
+  Rendered movies/_form.html.erb (145.4ms)
+  Rendered movies/new.html.erb within layouts/application (227.0ms)
+Completed 200 OK in 932ms (Views: 841.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/movies/4" for 10.0.2.2 at 2016-03-01 18:19:51 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMovie Load (4.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered movies/show.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 336ms (Views: 325.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/movies/4/edit" for 10.0.2.2 at 2016-03-01 18:19:54 +0000
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMovie Load (3.0ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered movies/_form.html.erb (7.8ms)
+  Rendered movies/edit.html.erb within layouts/application (75.7ms)
+Completed 200 OK in 432ms (Views: 425.8ms | ActiveRecord: 3.0ms)
+
+
+Started PATCH "/movies/4" for 10.0.2.2 at 2016-03-01 18:19:59 +0000
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B3h+NZwTyQssCJbnfzkDS+EnCv4fnonfTmrE2BsbY9g=", "movie"=>{"title"=>"The Big Lebowski", "release_date"=>"1988-05-06", "director"=>"Joel & Ethan Coen", "runtime_in_minutes"=>"117", "poster_image_url"=>"http://img.goldposter.com/2015/04/The-Big-Lebowski_poster_goldposter_com_33.jpg", "description"=>"\"The Dude\" Lebowski, mistaken for a millionaire Lebowski, seeks restitution for his ruined rug and enlists his bowling buddies to help get it."}, "commit"=>"Submit", "id"=>"4"}
+  [1m[35mMovie Load (7.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (19.9ms)[0m  UPDATE "movies" SET "poster_image_url" = ?, "updated_at" = ? WHERE "movies"."id" = 4  [["poster_image_url", "http://img.goldposter.com/2015/04/The-Big-Lebowski_poster_goldposter_com_33.jpg"], ["updated_at", Tue, 01 Mar 2016 18:19:59 UTC +00:00]]
+  [1m[36m (8.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies.4
+Completed 302 Found in 53ms (ActiveRecord: 35.3ms)
+
+
+Started GET "/movies.4" for 10.0.2.2 at 2016-03-01 18:19:59 +0000
+Processing by MoviesController#index as 
+  [1m[35mMovie Load (3.1ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 668ms (Views: 665.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2016-03-01 18:20:00 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 10.0.2.2 at 2016-03-01 18:20:00 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2016-03-01 18:20:00 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2016-03-01 18:20:00 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2016-03-01 18:20:00 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2016-03-01 18:20:01 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 10.0.2.2 at 2016-03-01 18:20:01 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2016-03-01 18:20:01 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2016-03-01 18:20:01 +0000
+
+
+Started GET "/movies/4" for 10.0.2.2 at 2016-03-01 18:20:28 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMovie Load (5.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered movies/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 361ms (Views: 353.3ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/movies/4/edit" for 10.0.2.2 at 2016-03-01 18:20:31 +0000
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMovie Load (8.8ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered movies/_form.html.erb (13.9ms)
+  Rendered movies/edit.html.erb within layouts/application (96.1ms)
+Completed 200 OK in 505ms (Views: 495.0ms | ActiveRecord: 8.8ms)
+
+
+Started PATCH "/movies/4" for 10.0.2.2 at 2016-03-01 18:20:38 +0000
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B3h+NZwTyQssCJbnfzkDS+EnCv4fnonfTmrE2BsbY9g=", "movie"=>{"title"=>"The Big Lebowski", "release_date"=>"1988-05-06", "director"=>"Joel & Ethan Coen", "runtime_in_minutes"=>"117", "poster_image_url"=>"http://411posters.com/wp-content/uploads/2012/08/Ghoulish-Gary-Pullin-the-big-lebowski-gid-variant.jpg", "description"=>"\"The Dude\" Lebowski, mistaken for a millionaire Lebowski, seeks restitution for his ruined rug and enlists his bowling buddies to help get it."}, "commit"=>"Submit", "id"=>"4"}
+  [1m[36mMovie Load (1.0ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (5.2ms)[0m  [1mUPDATE "movies" SET "poster_image_url" = ?, "updated_at" = ? WHERE "movies"."id" = 4[0m  [["poster_image_url", "http://411posters.com/wp-content/uploads/2012/08/Ghoulish-Gary-Pullin-the-big-lebowski-gid-variant.jpg"], ["updated_at", Tue, 01 Mar 2016 18:20:38 UTC +00:00]]
+  [1m[35m (4.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies.4
+Completed 302 Found in 36ms (ActiveRecord: 11.2ms)
+
+
+Started GET "/movies.4" for 10.0.2.2 at 2016-03-01 18:20:38 +0000
+Processing by MoviesController#index as 
+  [1m[36mMovie Load (2.9ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 625ms (Views: 620.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2016-03-01 18:20:39 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 10.0.2.2 at 2016-03-01 18:20:39 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2016-03-01 18:20:39 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2016-03-01 18:20:39 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2016-03-01 18:20:40 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2016-03-01 18:20:40 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 10.0.2.2 at 2016-03-01 18:20:40 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2016-03-01 18:20:40 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2016-03-01 18:20:40 +0000
+
+
+Started GET "/movies/new" for 10.0.2.2 at 2016-03-01 18:20:56 +0000
+Processing by MoviesController#new as HTML
+  Rendered movies/_form.html.erb (5.6ms)
+  Rendered movies/new.html.erb within layouts/application (66.2ms)
+Completed 200 OK in 377ms (Views: 376.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies" for 10.0.2.2 at 2016-03-01 18:22:48 +0000
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B3h+NZwTyQssCJbnfzkDS+EnCv4fnonfTmrE2BsbY9g=", "movie"=>{"title"=>"The conversation", "release_date"=>"1974-04-01", "director"=>"Francis Ford Coppola", "runtime_in_minutes"=>"113", "poster_image_url"=>"http://s3.amazonaws.com/quietus_production/images/articles/17623/the_conversation_poster_1428698938_crop_550x790.jpg", "description"=>"A paranoid, secretive surveillance expert has a crisis of conscience when he suspects that a couple he is spying on will be murdered."}, "commit"=>"Submit"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (11.8ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "poster_image_url", "release_date", "runtime_in_minutes", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 01 Mar 2016 18:22:49 UTC +00:00], ["description", "A paranoid, secretive surveillance expert has a crisis of conscience when he suspects that a couple he is spying on will be murdered."], ["director", "Francis Ford Coppola"], ["poster_image_url", "http://s3.amazonaws.com/quietus_production/images/articles/17623/the_conversation_poster_1428698938_crop_550x790.jpg"], ["release_date", Mon, 01 Apr 1974 00:00:00 UTC +00:00], ["runtime_in_minutes", 113], ["title", "The conversation"], ["updated_at", Tue, 01 Mar 2016 18:22:49 UTC +00:00]]
+  [1m[35m (7.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 33ms (ActiveRecord: 19.0ms)
+
+
+Started GET "/movies" for 10.0.2.2 at 2016-03-01 18:22:49 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (3.5ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 302ms (Views: 296.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 10.0.2.2 at 2016-03-01 18:22:49 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2016-03-01 18:22:49 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2016-03-01 18:22:49 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2016-03-01 18:22:49 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2016-03-01 18:22:50 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2016-03-01 18:22:50 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 10.0.2.2 at 2016-03-01 18:22:50 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2016-03-01 18:22:50 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2016-03-01 18:22:50 +0000
