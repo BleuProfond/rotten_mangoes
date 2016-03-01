@@ -1,4 +1,6 @@
 class Movie < ActiveRecord::Base
+
+  has_many :reiews
   
   validates :title,
     presence: true
