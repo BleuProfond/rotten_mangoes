@@ -11,6 +11,15 @@ Movie.create!(
   director: "Penelope Spheeris",
   runtime_in_minutes: 94,
   description: "Two slacker friends try to promote their public-access cable show.",
-  poster_image_url: "http://clashmusic.com/sites/default/files/styles/article_feature/public/field/image/waynes-world-3.jpg?itok=PIbjt3FO",
+  poster_image_url: File.open(File.join(Rails.root, 'waynes_world.jpg')),
   release_date: "14/02/1992"
+)
+
+User.create!(
+  :firstname => "Bob", 
+  :lastname => "Bobberson", 
+  :password => "123456", 
+  :password_confirmation => "123456", 
+  :email => "admin@example.com",
+  :admin => true
 )
