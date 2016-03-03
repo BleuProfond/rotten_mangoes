@@ -10,8 +10,7 @@ class ReviewsController < ApplicationController
   def create
     @review = @movie.reviews.build(review_params)
     @review.user_id = current_user.id
-
-    if @reviews.save
+    if @review.save
       redirect_to @movie, notice: "Review created successfully"
     else
       render :new

@@ -1,6 +1,28 @@
 class MoviesController < ApplicationController
   def index
     @movies = Movie.all
+
+    if params[:duration] && params[:search]
+      if params[:duration] == "1"
+        @movies = Movie.search(params[:search]).where("runtime_in_minutes < ?", 90)
+      elsif params[:duration] == "2"
+        @movies = Movie.search(params[:search]).where("runtime_in_minutes > ? and runtime_in_minutes < ? ", 90, 120)
+      else
+        @movies = Movie.search(params[:search]).where("runtime_in_minutes > ?", 120)
+      end
+    elsif params[:search]
+      @movies = Movie.search(params[:search])
+    elsif params[:duration]      
+      if params[:duration] == "1"
+        @movies = Movie.where("runtime_in_minutes < ?", 90)
+      elsif params[:duration] == "2"
+        @movies = Movie.where("runtime_in_minutes > ? and runtime_in_minutes < ? ", 90, 120)
+      else
+        @movies = Movie.where("runtime_in_minutes > ?", 120)
+      end
+    else
+      @movies = Movie.all
+    end
   end
 
   def show
@@ -38,6 +60,17 @@ class MoviesController < ApplicationController
     @movie.destroy
     redirect_to movies_path
   end
+
+  # def duration_to_boolean(choice)
+  #   case choice
+  #   when 1
+  #     choice < 90
+  #   when 2
+  #     choice > 90 && choice < 120
+  #   when 3
+  #     choice > 120
+  #   end  
+  # end
 
   protected
 

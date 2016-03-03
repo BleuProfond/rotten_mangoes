@@ -15,6 +15,15 @@ Movie.create!(
   release_date: "14/02/1992"
 )
 
+Movie.create!(
+  title: "The Conversation",
+  director: "Francis Ford Coppola",
+  runtime_in_minutes: 113,
+  description: "A paranoid, secretive surveillance expert has a crisis of conscience when he suspects that a couple he is spying on will be murdered.",
+  poster_image_url: File.open(File.join(Rails.root, 'the_conversation.jpg')),
+  release_date: "07/04/1974"
+)
+
 User.create!(
   :firstname => "Bob", 
   :lastname => "Bobberson", 
@@ -22,4 +31,13 @@ User.create!(
   :password_confirmation => "123456", 
   :email => "admin@example.com",
   :admin => true
+)
+
+User.create!(
+  :firstname => "Linda", 
+  :lastname => "Lindstrad", 
+  :password => "123456", 
+  :password_confirmation => "123456", 
+  :email => "linda@example.com",
+  :admin => false
 )
