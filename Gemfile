@@ -43,4 +43,6 @@ gem 'kaminari'
 gem 'pry-byebug'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-gem "carrierwave"
+gem 'carrierwave'
+
+gem 'bootstrap-sass'
