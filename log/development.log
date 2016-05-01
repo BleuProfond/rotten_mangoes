@@ -17605,3 +17605,119 @@ Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2016-03-15 20:13:41 +0000
 
 
 Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2016-03-15 20:13:41 +0000
+
+
+Started GET "/movies/1" for 10.0.2.2 at 2016-03-15 20:16:08 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (3.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (3.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from _app_views_movies_show_html_erb__97604367__621865228 at /vagrant/w5/rotten_mangoes/app/views/movies/show.html.erb:4)
+  [1m[36mReview Load (16.8ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 1]]
+  Rendered movies/show.html.erb within layouts/application (213.5ms)
+  Rendered layouts/_footer.html.erb (1.6ms)
+Completed 200 OK in 1234ms (Views: 998.6ms | ActiveRecord: 23.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2016-03-15 20:16:11 +0000
+
+
+Started GET "/assets/reviews.css?body=1" for 10.0.2.2 at 2016-03-15 20:16:11 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2016-03-15 20:16:11 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2016-03-15 20:16:12 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2016-03-15 20:16:12 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 10.0.2.2 at 2016-03-15 20:16:12 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2016-03-15 20:16:12 +0000
+
+
+Started GET "/assets/reviews.js?body=1" for 10.0.2.2 at 2016-03-15 20:16:12 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 10.0.2.2 at 2016-03-15 20:16:12 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2016-03-15 20:16:12 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2016-03-15 20:16:13 +0000
+
+
+Started GET "/movies" for 10.0.2.2 at 2016-03-15 20:16:26 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (4.2ms)[0m  SELECT "movies".* FROM "movies"
+  [1m[36mReview Load (3.3ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 1]]
+  [1m[35mReview Load (1.7ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 2]]
+  Rendered movies/index.html.erb within layouts/application (22.8ms)
+  Rendered layouts/_footer.html.erb (2.0ms)
+Completed 200 OK in 467ms (Views: 455.8ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-01 17:44:12 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies"
+  [1m[36mReview Load (3.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 1]]
+  [1m[35mReview Load (0.2ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 2]]
+  Rendered movies/index.html.erb within layouts/application (144.4ms)
+  Rendered layouts/_footer.html.erb (1.9ms)
+Completed 200 OK in 5513ms (Views: 5452.3ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-05-01 17:44:19 -0400
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2016-05-01 17:44:19 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-05-01 17:44:19 -0400
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2016-05-01 17:44:19 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-05-01 17:44:19 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-05-01 17:44:19 -0400
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2016-05-01 17:44:19 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-05-01 17:44:19 -0400
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-05-01 17:44:19 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-05-01 17:44:19 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-05-01 17:44:19 -0400
+
+
+Started GET "/movies?utf8=%E2%9C%93&search=&duration=2&commit=Search" for 127.0.0.1 at 2016-05-01 17:44:27 -0400
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "duration"=>"2", "commit"=>"Search"}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (title LIKE '%%' OR director LIKE '%%') AND (runtime_in_minutes > 90 and runtime_in_minutes < 120 )[0m
+  [1m[35mReview Load (0.2ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 2]]
+  Rendered movies/index.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-05-01 17:44:27 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-05-01 17:44:27 -0400
